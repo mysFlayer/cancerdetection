@@ -3,18 +3,16 @@ import { useLocation } from 'react-router-dom';
 const SuccessPage = () => {
     const location = useLocation();
     const data = location.state?.data;
-    console.log('Received data:', data); // Debugging log
-
   if (data===0) {
     return (<div>
             <h1>Results</h1>
-            <pre>THE TUMOR IS MOST PROBABLY BENIGN. So it should not be canerous. Please recheck with a doctor for assurance</pre>
+            <pre>THE TUMOR IS MOST PROBABLY BENIGN. So it should not be cancerous. Please recheck with a doctor for assurance</pre>
         </div>);
   }
   else if(data===1){
     return(<div>
             <h1>Results</h1>
-            <pre>THE TUMOR IS MOST PROBABLY MALIGNANT. So it may be canerous. Please recheck with a doctor for assurance</pre>
+            <pre>THE TUMOR IS MOST PROBABLY MALIGNANT. So it may be cancerous. Please recheck with a doctor for assurance</pre>
         </div>);
   }
   
